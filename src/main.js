@@ -4,11 +4,15 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home/index.html'));
+  res.sendFile(path.join(__dirname, 'home/welcome.html'));
+});
+
+app.get('/level1', (req, res) => {
+  res.sendFile(path.join(__dirname, 'level1/index.html'));
 });
 
 // Set the path to our /www
-app.use(express.static(path.join(__dirname, '../www')));
+app.use(express.static(path.join(__dirname, '../src')));
 
 // Create server function
 app.listen(PORT, function() {
