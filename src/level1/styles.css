@@ -1,0 +1,21 @@
+#divleft {
+    float: left;
+    margin-left: 15%;
+  }
+
+  #divright {
+    float: left;
+    padding: 20px;
+    width: 60%;
+  }
+
+  #p1 {
+    text-align: center;
+  }
+
+  /* footer */
+  footer {
+    padding: 10px;
+    clear: both;
+    height: 0px;
+  }

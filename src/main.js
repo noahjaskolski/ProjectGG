@@ -18,3 +18,7 @@ app.use(express.static(path.join(__dirname, '../src')));
 app.listen(PORT, function() {
     console.log('Web app listening on port 3000');
 });
+
+//app.use('/level1', express.static(__dirname + '/level1'));
+//app.use('/home',express.static(__dirname +'/home'));
+

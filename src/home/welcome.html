@@ -1,50 +1,35 @@
 <!doctype html>
 
-<!-- WHEN WE FIGURE IT OUT THIS IS IDEAL-->
-<!-- link href="welcome.css" rel="stylesheet"> -->
-
-<!--SOLUTION FOR NOW-->
-<style>
-.div{
-    float:left;
-    
-   
-}
-p{
-    text-align:center;
-}
-.formstack{
-    display:block;
-
-}
-</style>
-
 <html>
     <head>
         <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="home/welcome.css">
+        <script src="../server.js"></script>
     </head>
 
     <body>
-        <div class="div">
-            <h1>Welcome to Project GG!</h1>
-            <p>Sign in to your account</p>
+        <img id="backgroundimage" src="img/Project-GG-logos.jpeg">
+        <div class="container">
+            <div class="div1">
+                <h1>Welcome to Project GG!</h1>
+                <p>Sign in to your account</p>
+            </div>
 
-            
+            <div class="div2">
+                <p>Login To Your Account</p>
+                <div>
+                    <form>
+                        <input id="email" type=text placeholder="Email Address" class="formstack"></input>
+                        <input type=text placeholder="Password" class="formstack"></input> 
+                        <input type="checkbox" class="formstack"> 
+                        <label for="rememberMe" >Remember me</label>
+                        <input type="submit" value="Login" onclick="Onclick()" class="formstack">
+                        <a href="url">Create an Account</a>
+                    </form>
+                </div>
+            </div>
+            <footer>2022</footer>
         </div>
-
-        <div class="div">
-            <p>Login To Your Account</p>
-
-            <form>
-            <input name type=text placeholder="Email Address" class="formstack"></input>
-            <input name type=text placeholder="Password" class="formstack"></input> 
-            <input type="checkbox" class="formstack"> 
-            <label for="rememberMe" >Remember me</label>
-            <input type="submit" value="Login" onclick="" class="formstack">
-            <a href="url">Create an Account</a>
-            </form>
-        </div>
-        <footer>2022</footer>
-
     </body>
+</html>
 
