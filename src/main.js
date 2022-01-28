@@ -11,6 +11,10 @@ app.get('/level1', (req, res) => {
   res.sendFile(path.join(__dirname, 'level1/index.html'));
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'home/account.html'));
+});
+
 // Set the path to our /www
 app.use(express.static(path.join(__dirname, '../src')));
 
