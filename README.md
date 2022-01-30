@@ -1,5 +1,5 @@
 # Project GG
-![ProjectGG](https://github.com/noahjaskolski/ProjectGG/blob/main/src/img/Project-GG-logos.jpeg?raw=true)
+![ProjectGG](https://github.com/noahjaskolski/ProjectGG/blob/main/src/img/Project-GG-logo_2.0.jpg?raw=true)
 
 ## Mission
 Provide students with the opportunity to learn the Linux Operating System and its utilities through a browser-based terminal.
