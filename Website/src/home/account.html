@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Homepage</title>
+    </head>
+
+    <body>
+        <div class="div">
+            <h1>Welcome to Project GG!</h1>
+        </div>
+
+        <div class="div">
+            <p>Create Your Account</p>
+
+            <form id="account">
+            <input name type=text id="email" placeholder="Email Address" class="formstack"></input>
+            <input name type="password" id="password" placeholder="Password" class="formstack"></input> 
+            <input type="checkbox" class="formstack"> 
+            <label for="rememberMe">Remember me</label>
+            <input type="submit" value="Create"/>
+            <!-- <button onclick= "location.href = 'welcome.html'">Create Account</button> -->
+            <a href="./welcome.html">
+            </form>
+        </div>
+        <footer>Copyright &#9400 Project GG All Rights Reserved</footer>
+        <script>
+            const form = document.getElementById('account');
+
+            form.addEventListener('submit', createAccount);
+
+            async function createAccount(event) {
+                event.preventDefault() //to prevent refresh of page on clicking submit
+                const email = document.getElementById("email").value
+                const password = document.getElementById("password").value
+    
+                const result = await fetch("/api/post", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password
+                    })
+                }).then((res) => res.json())
+            }
+        </script>
+    </body>
