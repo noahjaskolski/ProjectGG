@@ -60,11 +60,11 @@ p, ul, ol {
 a {
   -webkit-transition: .3s all;
   transition: .3s all;
-  color: #6a41ed;
+  color: #8B0000;
 }
 
 a:hover, a:focus, a:active {
-  color: #582aeb;
+  color: #8B0000;
   text-decoration: none;
 }
 
@@ -736,7 +736,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-hero.probootstrap-hero-colored {
-  background: #e4341d;
+  background: #8B0000;
 }
 
 .probootstrap-hero.probootstrap-hero-colored h1 {
@@ -879,7 +879,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-showcase-nav ul li.active > a {
-  color: #ea4034;
+  color:#8B0000;
   padding-left: 0px;
   display: block;
 }
@@ -967,7 +967,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-section.probootstrap-section-colored {
-  background: #e4341d;
+  background: #8B0000;
 }
 
 .probootstrap-section.probootstrap-section-colored .section-heading h2 {
@@ -1045,7 +1045,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-cta {
   padding: 3em 0;
-  background: #6a41ed;
+  background: #8B0000;
   color: #ffffff;
 }
 
@@ -1100,7 +1100,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-cta .btn.btn-ghost:hover {
   background: #ffffff;
-  color: #6a41ed;
+  color: #8B0000;
 }
 
 .probootstrap-footer {
@@ -1350,7 +1350,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-teacher .probootstrap-footer-social li.google-plus a {
-  color: #dd4b39;
+  color: #8B0000;
 }
 
 .probootstrap-teacher:focus, .probootstrap-teacher:hover {
@@ -1609,7 +1609,7 @@ a:hover, a:focus, a:active {
   top: -30px;
   -webkit-transition: .3s all;
   transition: .3s all;
-  border-bottom: 3px solid #6a41ed;
+  border-bottom: 3px solid #8B0000;
 }
 
 .probootstrap-featured-news-box .probootstrap-text h3 {
@@ -1627,7 +1627,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-featured-news-box:hover .probootstrap-text, .probootstrap-featured-news-box:focus .probootstrap-text {
-  background: #6a41ed;
+  background: #8B0000;
   top: -40px;
   -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
@@ -2474,7 +2474,7 @@ a:hover, a:focus, a:active {
   display: block;
   text-transform: none;
   letter-spacing: normal;
-  color: #6a41ed;
+  color: #8B0000;
   font-size: 14px;
 }
 
@@ -2484,7 +2484,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-pricing .probootstrap-price-wrap .probootstrap-price {
   font-size: 50px;
-  color: #6a41ed;
+  color: #8B0000;
   font-weight: 100;
   display: block;
   margin-bottom: 10px;
