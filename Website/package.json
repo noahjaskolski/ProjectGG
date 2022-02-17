@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/main.js",
+    "start": "node enlight-master/webserver.js",
     "dev": "nodemon src/main.js"
   },
   "dependencies": {
