@@ -19,7 +19,7 @@ html {
 
 body {
   background: #EFF0F4;
-  color: #8b8e94;
+  color: #181920;
   line-height: 28px;
   font-size: 15px;
   font-family: "Raleway", Arial, sans-serif;
@@ -186,7 +186,7 @@ a:hover, a:focus, a:active {
 .probootstrap-top-quick-contact-info span i {
   display: inline-block;
   margin-right: 10px;
-  color: #49D292;
+  color: #292b2a;
 }
 
 .probootstrap-top-social {
@@ -214,7 +214,7 @@ a:hover, a:focus, a:active {
 .probootstrap-top-social ul li a {
   display: inline-block;
   padding: 4px;
-  color: #49D292;
+  color: #292b2a;
 }
 
 .probootstrap-top-social ul li:last-child a {
@@ -394,12 +394,12 @@ a:hover, a:focus, a:active {
 .probootstrap-navbar .dropdown > .dropdown-menu > li a:hover {
   border-top: none;
   background: #ffffff;
-  color: #49D292;
+  color: #292b2a;
 }
 
 .probootstrap-navbar .dropdown > .dropdown-menu > li.open > a, .probootstrap-navbar .dropdown > .dropdown-menu > li:hover > a, .probootstrap-navbar .dropdown > .dropdown-menu > li:focus > a, .probootstrap-navbar .dropdown > .dropdown-menu > li:active > a {
   border-top: none;
-  color: #49D292;
+  color: #292b2a;
   background: #ffffff;
 }
 
@@ -512,7 +512,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-navbar .navbar-nav > li.active > a {
   background: none !important;
-  color: #49D292 !important;
+  color: #292b2a !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -526,13 +526,13 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-navbar .navbar-nav > li > .dropdown-menu:before {
-  border: 1px solid #49D292;
+  border: 1px solid #292b2a;
   content: "";
   position: absolute;
   top: -20px;
   left: 40px;
   border-color: rgba(73, 210, 146, 0);
-  border-bottom-color: #49D292;
+  border-bottom-color: #292b2a;
   border-width: 10px;
   margin-left: -10px;
 }
@@ -912,8 +912,8 @@ a:hover, a:focus, a:active {
 }
 
 .btn.btn-primary {
-  border: 1px solid #49D292;
-  background: #49D292;
+  border: 1px solid #292b2a;
+  background: #292b2a;
   color: #ffffff;
 }
 
@@ -923,25 +923,25 @@ a:hover, a:focus, a:active {
 
 .btn.btn-primary:focus, .btn.btn-primary:active {
   outline: none;
-  border: 1px solid #49D292;
+  border: 1px solid #292b2a;
 }
 
 .btn.btn-ghost {
   background: transparent;
-  border: 1px solid #49D292;
-  color: #49D292;
+  border: 1px solid #292b2a;
+  color: #292b2a;
 }
 
 .btn.btn-ghost:hover {
-  background: #49D292;
+  background: #292b2a;
   color: #ffffff;
 }
 
 .btn.btn-ghost:focus, .btn.btn-ghost:active {
   outline: none;
   background: transparent;
-  color: #49D292;
-  border: 1px solid #49D292;
+  color: #292b2a;
+  border: 1px solid #292b2a;
 }
 
 .probootstrap-section {
@@ -1378,7 +1378,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-counter-wrap .probootstrap-icon i {
   font-size: 40px;
-  color: #49D292;
+  color: #292b2a;
 }
 
 .probootstrap-counter-wrap .probootstrap-text .probootstrap-counter {
@@ -1529,7 +1529,7 @@ a:hover, a:focus, a:active {
 .nav-tabs.probootstrap-tabs > li > a, .nav-pills.probootstrap-tabs > li > a {
   border-radius: 0px;
   padding: 20px 30px;
-  background: #49D292;
+  background: #292b2a;
   color: #ffffff;
   font-size: 16px;
   border: none !important;
@@ -1667,7 +1667,7 @@ a:hover, a:focus, a:active {
 .service .icon i {
   font-size: 40px;
   color: rgba(0, 0, 0, 0.2);
-  color: #49D292;
+  color: #292b2a;
 }
 
 .service h3 {
