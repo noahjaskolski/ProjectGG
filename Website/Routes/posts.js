@@ -6,12 +6,8 @@ const router = express.Router();
 //import schema
 const Post = require('../Models/Post');
 
-router.get('/', (req,res)=>{
-    res.send('we are on posts');
-});
-
 //on post request, create new entry, save entry to database, save entry in JSON formatting
-router.post('/', async (req, res) => {
+router.post('/post', async (req, res) => {
     //encrypt password
     const encryptPass = await bcrypt.hash(req.body.password, 10);
 
@@ -20,7 +16,7 @@ router.post('/', async (req, res) => {
     if (userExists) {
         return res.status(400).send(`User with this email already exists`);
     }
-
+    //create new post using schema from Models
     const post = new Post({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -28,6 +24,7 @@ router.post('/', async (req, res) => {
         password: encryptPass,
         level: req.body.level
     });
+    //save post to database
     const savedPost = await post.save();
     res.json(savedPost);
 });

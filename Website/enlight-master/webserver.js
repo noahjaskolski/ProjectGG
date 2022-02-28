@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const postsRoute = require('../Routes/posts');
 
 //use middleware
-app.use('/api/post', postsRoute);
+app.use('/api', postsRoute);
 
 //path to webpages
 app.get('/', (req, res) => {
