@@ -6,12 +6,8 @@ const router = express.Router();
 //import schema
 const Post = require('../Models/Post');
 
-router.get('/', (req,res)=>{
-    res.send('we are on posts');
-});
-
 //on post request, create new entry, save entry to database, save entry in JSON formatting
-router.post('/', async (req, res) => {
+router.post('/post', async (req, res) => {
     //encrypt password
     const encryptPass = await bcrypt.hash(req.body.password, 10);
 
