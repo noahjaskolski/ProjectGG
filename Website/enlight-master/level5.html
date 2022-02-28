@@ -90,29 +90,38 @@
           <div class="col-md-12 text-left section-heading probootstrap-animate">
             <h1>Welcome to Level 5
             </h1>
-            <p>Within the Linux operating system, there are different types of users with varying levels of access to the files in the hierarchy. Each user is identified by a system UID (User Identification number) that is stored in /etc/passwd file. The hashed password for users are stored in /etc/shadow. In the previous lesson, we learned more about the file hierarchy and its purpose.</p>
+            <p>We have covered many topics in this tutorial. We have learned what a bash shell is, useful commands to use in the terminal, the file hierarchy within Linux, categories of users and their permissions, and TOBEADDED. Now, let's make a simple bash script.</p>
           
         </div>
     </section>
       
     <div id="divleft"></div>
-    <p>Let's take a look at this file. Login to the terminal and enter cd /etc, cat passwd. You can see the contents of the file of users along with each user's username, password, UID, GID (Group User Identification), GECOS (additional information of user if entered), absolute path of user's home directory and the login shell of the user. </p>
-    <p><h4>Syntax:</h4>
+    <h3>Structure of a Bash script</h3>
+    <p>Here is a sample of a bash script that you are familiar with:<br>
+      #!/bin/bash<br>
+      echo "Hello World"<br>
+      <br>
+      The symbols: #! are known as a shebang and it is the start of the script file as an executable for the loader to execute the script with the <i>path/to/script</i> so in this case it loads the path to bin using script bash. 
+    </p>
+    <p>Bash scripts are like a minature program that is created to run specific commands in the terminal. There are many uses of bash scripts that can save time and deliver consistent results. </p>
+    <p> We are going to create a bash script to greet a user with the date and then add any two numbers. First, let's create a file.In the terminal, enter sudo vim myProgram.sh (this allows you to open a text editor called vim and named myProgram.sh). Now you will see a blank editor, to edit the file, you will need to go into insert mode by typing i."
+      Type the shebang #!/bin/bash<br>
+      Then we need to add our commands to run in the bash script:<br>
+      <br>
+      echo "Enter your name"<br>
+      read name<br>
+      echo "Welcome $name. Today," `date` "is a good day!"<br> 
+      echo "Enter your first number"<br>
+      read x <br>
+      echo "Enter your second number"<br>
+      read y <br>
+      ((sum =x+y)) <br>
+      echo "Okay, your total is $sum" <br>
+      <br>
+      You will need to save the file by exiting insert mode and typing :wq. This command tells the editor to save and quit the file. If you are unsure if your file is accurate, you can concatenate a file that we have already created by typing cat testmyprogram.sh. **Note, here we are using the input variable name in the echo command with $name. Also note that the `date` is telling the script to run the command with the symbol <b>`</b> for the command date. This can be used to execute any command that is natively known in the Linus OS. <br>
 
-      [username]:[password]:[UID]:[GID]:[GECOS]:[home_dir]:[shell_path]</p>
-    <h3>Two categories of users based on access are:</h3>
-    <ul>
-      <li>Superuser/root/administrator:this user has access to all files on the system.</li>
-      <li>Normal users: have limited access</li>
-      </ul>
-    <p>Sudo is an important command that allows a permitted user to execute a command as the superuser. Operative word is permitted. Not all users will have this level of access. Let's try to view the /etc/shadow file with command: cat /etc/shadow </p>
-    <p>Permission was denied because only a superuser/root/admin can view this file. Try sudo cat /etc/shadow. </p>
-    <p>Success! you can now see the users.</p>
-    <p><h4>Syntax:</h4>
-
-      [username]:[enc_pwd]:[last_pwd_change]:[pwd_validity]:[warn_date]:[acc_validity]:[acc_disablity]</p>
-    </div>
-    <p>We can see towards the bottom your user name vintage and the encrypted password following your username. This is a hashed password that cannot be decrypted. The beginning of this hash is denoted with $6 which represents a SHA512 hashing. </p>
+    </p>
+    
     <div id="divright">
       <!-- NEED Xterm setup -->
       <iframe width="640" height="360" src="http://34.227.46.125:4200/" title="YouTube video player" frameborder="0"
