@@ -16,7 +16,7 @@ router.post('/post', async (req, res) => {
     if (userExists) {
         return res.status(400).send(`User with this email already exists`);
     }
-
+    //create new post using schema from Models
     const post = new Post({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -24,6 +24,7 @@ router.post('/post', async (req, res) => {
         password: encryptPass,
         level: req.body.level
     });
+    //save post to database
     const savedPost = await post.save();
     res.json(savedPost);
 });
