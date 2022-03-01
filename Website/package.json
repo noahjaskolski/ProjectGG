@@ -4,10 +4,11 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/main.js",
+    "start": "node enlight-master/webserver.js",
     "dev": "nodemon src/main.js"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
