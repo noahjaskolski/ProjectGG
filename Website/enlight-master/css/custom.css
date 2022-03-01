@@ -15,12 +15,28 @@
  }
   
  div.right {
-    position: flex;
-    left: 500px;
+    position: relative;
+    right: 0px;
     width: 300px;
  
   } 
  
  footer{
     margin-top: auto;
+}
+
+.BeforeScroll
+{
+  height: 500px; /*Whatever you want*/
+  width: 50%; /*Whatever you want*/
+  display: block;
+}
+
+
+/*Use this class when you want your content to be shown after some scroll*/
+.AfterScroll
+{
+  height: 500px; /*Whatever you want*/
+  width: 50%; /*Whatever you want*/
+  display: block;
 }
