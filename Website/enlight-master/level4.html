@@ -22,6 +22,7 @@
    
   </head>
 <body>
+  <div class="mainheader">
   <div class="probootstrap-search" id="probootstrap-search">
     <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
     <form action="#">
@@ -93,31 +94,28 @@
           
         </div>
     </section>
-      
-    <div id="divleft"></div>
+    <div class="maincontent">
+      <div class="left">
+    
     <p>To create files in vim, you will need to enter vim filename.extension so for example: vim myfile.txt. This would create a text file named myfile, but the extension can be used to create text files, bash scripts,   </p>
-    <p><h4>Syntax:</h4>
-
-      [username]:[password]:[UID]:[GID]:[GECOS]:[home_dir]:[shell_path]</p>
-    <h3>Two categories of users based on access are:</h3>
-    <ul>
-      <li>Superuser/root/administrator:this user has access to all files on the system.</li>
-      <li>Normal users: have limited access</li>
-      </ul>
-    <p>Sudo is an important command that allows a permitted user to execute a command as the superuser. Operative word is permitted. Not all users will have this level of access. Let's try to view the /etc/shadow file with command: cat /etc/shadow </p>
-    <p>Permission was denied because only a superuser/root/admin can view this file. Try sudo cat /etc/shadow. </p>
-    <p>Success! you can now see the users.</p>
-    <p><h4>Syntax:</h4>
-
-      [username]:[enc_pwd]:[last_pwd_change]:[pwd_validity]:[warn_date]:[acc_validity]:[acc_disablity]</p>
+    <p>
+      <h4>Practice Time:</h4>
+      <p>Go to terminal and view test.txt---cat test.txt<br> 
+        In terminal type <b>sudo vim test.txt</b> <br>
+        You are using vim to view test.txt. 
+        By using the <b>i</b> command, you move to insert mode. Do this now.<br>
+        Now go to the end of the file and type your name and favorite color. <br>
+        Press <b>esc</b> to exit insert mode<br>
+        Now type <b>:wq</b> to save and quit file<br>
+        Let's test your modifications. In terminal, type <b>cat test.txt.</b> <br> You should see your addition.<br>  
+      </p>
+      
     </div>
-    <p>We can see towards the bottom your user name vintage and the encrypted password following your username. This is a hashed password that cannot be decrypted. The beginning of this hash is denoted with $6 which represents a SHA512 hashing. </p>
-    <div id="divright">
-      <!-- NEED Xterm setup -->
+    <div class="right">
       <iframe width="640" height="360" src="http://34.227.46.125:4200/" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-
+</div>
   </div>
     
     <footer class="probootstrap-footer probootstrap-bg">
