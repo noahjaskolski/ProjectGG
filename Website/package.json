@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node enlight-master/webserver.js",
+    "start": "nodemon enlight-master/webserver.js",
     "dev": "nodemon src/main.js"
   },
   "dependencies": {
@@ -12,6 +12,7 @@
     "body-parser": "^1.19.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.2",
     "path": "^0.12.7"
   },
