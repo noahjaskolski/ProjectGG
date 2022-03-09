@@ -7,7 +7,7 @@ const JWT_SECRET = 'SOMESECRETPASSWORD'
 
 //import schema
 const Post = require('../Models/Post');
-const { findOne } = require('../Models/Post');
+//const { findOne } = require('../Models/Post');
 
 //on post request, create new entry, save entry to database, save entry in JSON formatting
 router.post('/post', async (req, res) => {
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
 
     if (!user) {
         console.log('unsuccessful')
-        return res.json({ status: 'error', error: 'Invalid username or password' })
+        return res.status(400).json({ error: 'Invalid username or password' })
     }
 
     if (await bcrypt.compare( req.body.password, user.password )) {
@@ -47,10 +47,13 @@ router.post('/login', async (req, res) => {
             email: Post.email
         }, JWT_SECRET)
         console.log("Success")
-        return res.json({ status: 'ok', data: token })
+        console.log(token)
+        return res.status(200).send({ token: token, message: "Success" })
+        //return res.cookie('token', token, {expire: new Date() +1 })
+    } else {
+        //res.cookie('token', JWT_SECRET, {expire: new Date() +1 })
+        return res.status(400).json({ error: 'Invalid username or password' });
     }
-
-    res.json({ status: 'error', error: 'Invalid username or password' });
 })
 
 module.exports = router;
