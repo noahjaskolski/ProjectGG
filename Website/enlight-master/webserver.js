@@ -11,17 +11,20 @@ const uri = process.env.MONGODB_URI;
 const PORT = 3000;
 app.use(bodyParser.json());
 
-//import Routes
+//import Routes and other files
 const postsRoute = require('../Routes/posts');
+const { authenticate } = require('../middleware/authentication');
+const cookieParser = require('cookie-parser');
 
 //use middleware
 app.use('/api', postsRoute);
+app.use(cookieParser())
 
 //path to webpages
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'account.html'));
 });
-app.get('/level1', (req, res) => {
+app.get('/level1', authenticate, (req, res) => {
   res.sendFile(path.join(__dirname, 'level1.html'));
 });
 
