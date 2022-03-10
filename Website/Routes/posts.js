@@ -1,9 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+require('dotenv/config');
 
 const router = express.Router();
-const JWT_SECRET = 'SOMESECRETPASSWORD'
+const JWT_SECRET = process.env.JWT_SECRET;
 
 //import schema
 const Post = require('../Models/Post');
@@ -29,7 +30,7 @@ router.post('/post', async (req, res) => {
     });
     //save post to database
     const savedPost = await post.save();
-    res.json(savedPost);
+    return res.status(200).send({ message: "Success" })
 });
 
 router.post('/login', async (req, res) => {
@@ -48,8 +49,8 @@ router.post('/login', async (req, res) => {
         }, JWT_SECRET)
         console.log("Success")
         console.log(token)
-        return res.status(200).send({ token: token, message: "Success" })
-        //return res.cookie('token', token, {expire: new Date() +1 })
+        res.cookie('jwt', token, {expire: new Date() +1 })
+        res.status(200).send({ token: token, message: "Success" })
     } else {
         //res.cookie('token', JWT_SECRET, {expire: new Date() +1 })
         return res.status(400).json({ error: 'Invalid username or password' });

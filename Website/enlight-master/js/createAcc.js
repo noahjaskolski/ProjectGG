@@ -2,7 +2,7 @@ const form = document.getElementById('account');
 
 form.addEventListener('submit', createAccount);
 async function createAccount(event) {
-    //event.preventDefault() //to prevent refresh of page on clicking submit
+    event.preventDefault() //to prevent refresh of page on clicking submit
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
     const result = await fetch("/api/post", {
@@ -14,5 +14,13 @@ async function createAccount(event) {
             email,
             password
         })
-    }).then((res) => res.json())
+    })
+    const body = await response.json();
+    console.log(body)
+    if (body.message) {
+        alert('successfull')
+    } else {
+        console.log("error")
+        alert("ERROR")
+    }
 }
