@@ -8,19 +8,21 @@
   License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GameGladiators</title>
-    <meta name="description" content="GameGladiators by gamegladiators.com">
-    
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-merged.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/custom.css">
 
-   
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameGladiators</title>
+  <meta name="description" content="GameGladiators by gamegladiators.com">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-merged.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
 <body>
   <div class="probootstrap-search" id="probootstrap-search">
     <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
@@ -28,158 +30,174 @@
       <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
     </form>
   </div>
-  
-  <div class="probootstrap-page-wrapper">
-    <!-- Fixed navbar -->
-    
-    <div class="probootstrap-header-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-            <span><i class="icon-location2"></i>Chandler, AZ United States</span>
-            <span><i class="icon-mail"></i>info@gamegladiators.com</span>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-            <ul>
+
+
+  <!-- <div class="probootstrap-page-wrapper">Fixed navbar -->
+
+  <div class="probootstrap-header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+          <span><i class="icon-location2"></i>Chandler, AZ United States</span>
+          <span><i class="icon-mail"></i>info@gamegladiators.com</span>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+          <ul>
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook2"></i></a></li>
+            <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            <li><a href="#"><i class="icon-youtube"></i></a></li>
+            <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-default probootstrap-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="btn-more js-btn-more visible-xs">
+          <a href="#"><i class="icon-dots-three-vertical "></i></a>
+        </div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" title="ProBootstrap:Enlight">Enlight</a>
+      </div>
+
+      <div id="navbar-collapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="account.html">Create Account</a></li>
+          <li><a href="welcome.html">Login</a></li>
+          <li><a href="gladiators.html">Gladiators</a></li>
+          <li><a href="level1.html">Tutorial</a></li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="probootstrap-section probootstrap-section-colored">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left section-heading probootstrap-animate">
+          <h1>Welcome to Level 5
+          </h1>
+          <p>We have covered many topics in this tutorial. We have learned what a bash shell is, useful commands to use
+            in the terminal, the file hierarchy within Linux, categories of users and their permissions, and TOBEADDED.
+            Now, let's make a simple bash script.</p>
+
+        </div>
+  </section>
+  <div class="maincontent">
+    <div class="right">
+      <iframe width="100%" height="360" src="http://34.227.46.125:4200/" title="Terminal"></iframe>
+    </div>
+    <div id="divleft">
+      <h3>Structure of a Bash script</h3>
+      <p>Here is a sample of a bash script that you are familiar with:<br>
+        #!/bin/bash<br>
+        echo "Hello World"<br>
+        <br>
+        The symbols: #! are known as a shebang and it is the start of the script file as an executable for the loader to
+        execute the script with the <i>path/to/script</i> so in this case it loads the path to bin using script bash.
+      </p>
+      <p>Bash scripts are like a minature program that is created to run specific commands in the terminal. There are
+        many
+        uses of bash scripts that can save time and deliver consistent results. </p>
+      <p> We are going to create a bash script to greet a user with the date and then add any two numbers. First, let's
+        create a file.In the terminal, enter sudo vim myProgram.sh (this allows you to open a text editor called vim and
+        named myProgram.sh). Now you will see a blank editor, to edit the file, you will need to go into insert mode by
+        typing i."
+        Type the shebang #!/bin/bash<br>
+        Then we need to add our commands to run in the bash script:<br>
+        <br>
+        echo "Enter your name"<br>
+        read name<br>
+        echo "Welcome $name. Today," `date` "is a good day!"<br>
+        echo "Enter your first number"<br>
+        read x <br>
+        echo "Enter your second number"<br>
+        read y <br>
+        ((sum =x+y)) <br>
+        echo "Okay, your total is $sum" <br>
+        <br>
+        You will need to save the file by exiting insert mode and typing :wq. This command tells the editor to save and
+        quit the file. If you are unsure if your file is accurate, you can concatenate a file that we have already
+        created
+        by typing cat testmyprogram.sh. **Note, here we are using the input variable name in the echo command with
+        $name.
+        Also note that the `date` is telling the script to run the command with the symbol <b>`</b> for the command
+        date.
+        This can be used to execute any command that is natively known in the Linus OS. <br>
+
+      </p>
+    </div>
+  </div>
+  <footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="probootstrap-footer-widget">
+            <h3>About Our Programs</h3>
+            <p>Our mission is to design user interactive programs that make learning easy and fun through games. Each
+              program has content geared to equip our users with the foundational knowledge to be successful in
+              completing the course and gaining a deeper understanding.</p>
+            <h3>Social</h3>
+            <ul class="probootstrap-footer-social">
               <li><a href="#"><i class="icon-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-facebook2"></i></a></li>
-              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-github"></i></a></li>
+              <li><a href="#"><i class="icon-dribbble"></i></a></li>
+              <li><a href="#"><i class="icon-linkedin"></i></a></li>
               <li><a href="#"><i class="icon-youtube"></i></a></li>
-              <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-    <nav class="navbar navbar-default probootstrap-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="btn-more js-btn-more visible-xs">
-            <a href="#"><i class="icon-dots-three-vertical "></i></a>
-          </div>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html" title="ProBootstrap:Enlight">Enlight</a>
-        </div>
 
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="account.html">Create Account</a></li>
-            <li><a href="welcome.html">Login</a></li>
-            <li><a href="gladiators.html">Gladiators</a></li>
-            <li><a href="level1.html">Tutorial</a></li>
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-              <ul class="dropdown-menu">
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
-              </ul>
-            </li>
-              </ul>
-        </div>
-      </div>
-    </nav>
-    <section class="probootstrap-section probootstrap-section-colored">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-left section-heading probootstrap-animate">
-            <h1>Welcome to Level 5
-            </h1>
-            <p>We have covered many topics in this tutorial. We have learned what a bash shell is, useful commands to use in the terminal, the file hierarchy within Linux, categories of users and their permissions, and TOBEADDED. Now, let's make a simple bash script.</p>
-          
-        </div>
-    </section>
-      
-    <div id="divleft"></div>
-    <h3>Structure of a Bash script</h3>
-    <p>Here is a sample of a bash script that you are familiar with:<br>
-      #!/bin/bash<br>
-      echo "Hello World"<br>
-      <br>
-      The symbols: #! are known as a shebang and it is the start of the script file as an executable for the loader to execute the script with the <i>path/to/script</i> so in this case it loads the path to bin using script bash. 
-    </p>
-    <p>Bash scripts are like a minature program that is created to run specific commands in the terminal. There are many uses of bash scripts that can save time and deliver consistent results. </p>
-    <p> We are going to create a bash script to greet a user with the date and then add any two numbers. First, let's create a file.In the terminal, enter sudo vim myProgram.sh (this allows you to open a text editor called vim and named myProgram.sh). Now you will see a blank editor, to edit the file, you will need to go into insert mode by typing i."
-      Type the shebang #!/bin/bash<br>
-      Then we need to add our commands to run in the bash script:<br>
-      <br>
-      echo "Enter your name"<br>
-      read name<br>
-      echo "Welcome $name. Today," `date` "is a good day!"<br> 
-      echo "Enter your first number"<br>
-      read x <br>
-      echo "Enter your second number"<br>
-      read y <br>
-      ((sum =x+y)) <br>
-      echo "Okay, your total is $sum" <br>
-      <br>
-      You will need to save the file by exiting insert mode and typing :wq. This command tells the editor to save and quit the file. If you are unsure if your file is accurate, you can concatenate a file that we have already created by typing cat testmyprogram.sh. **Note, here we are using the input variable name in the echo command with $name. Also note that the `date` is telling the script to run the command with the symbol <b>`</b> for the command date. This can be used to execute any command that is natively known in the Linus OS. <br>
-
-    </p>
-    
-    <div id="divright">
-      <!-- NEED Xterm setup -->
-      <iframe width="640" height="360" src="http://34.227.46.125:4200/" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-
-  </div>
-    
-    <footer class="probootstrap-footer probootstrap-bg">
+      <div class="probootstrap-copyright">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <div class="probootstrap-footer-widget">
-                <h3>About Our Programs</h3>
-                <p>Our mission is to design user interactive programs that make learning easy and fun through games. Each program has content geared to equip our users with the foundational knowledge to be successful in completing the course and gaining a deeper understanding.</p>
-                <h3>Social</h3>
-                <ul class="probootstrap-footer-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-github"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div>         
-        </div>
-
-        <div class="probootstrap-copyright">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 text-left">
-                <p>&copy; 2022 Copyright Project GG All Rights Reserved
-                   Designed &amp; Developed with <i class="icon icon-heart"></i> by GameGladiators</p>
-              </div>
-              <div class="col-md-4 probootstrap-back-to-top">
-                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
-              </div>
+            <div class="col-md-8 text-left">
+              <p>&copy; 2022 Copyright Project GG All Rights Reserved
+                Designed &amp; Developed with <i class="icon icon-heart"></i> by GameGladiators</p>
+            </div>
+            <div class="col-md-4 probootstrap-back-to-top">
+              <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
             </div>
           </div>
         </div>
-      </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+      </div>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
-        <!-- END wrapper -->
-        <script src="js/scripts.min.js"></script>
-        <script src="js/main.min.js"></script>
-        <script src="js/custom.js"></script>
+  <!-- END wrapper -->
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
 
-    </body>
+</body>
+
 </html>
