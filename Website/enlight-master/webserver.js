@@ -22,7 +22,7 @@ app.use(cookieParser())
 
 //path to webpages
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'account.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.get('/levels', authenticate, (req, res) => {
   res.sendFile(path.join(__dirname, 'levels/level1.html'));

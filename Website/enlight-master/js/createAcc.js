@@ -16,12 +16,12 @@ async function createAccount(event) {
         })
     })
     const body = await result.json();
-    console.log(body)
-    if (body.message) {
-        alert('Account Created Successfully')
-        window.location.href = "/welcome.html"
+    console.log(body.message)
+    if (body.message == 'Success') {
+        alert(body.message)
+        window.location.href = "/login.html"
     } else {
         console.log("error")
-        alert("ERROR")
+        alert(body.error)
     }
 }
