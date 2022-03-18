@@ -15,10 +15,11 @@ async function createAccount(event) {
             password
         })
     })
-    const body = await response.json();
+    const body = await result.json();
     console.log(body)
     if (body.message) {
-        alert('successfull')
+        alert('Account Created Successfully')
+        window.location.href = "/welcome.html"
     } else {
         console.log("error")
         alert("ERROR")
