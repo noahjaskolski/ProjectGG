@@ -52,7 +52,6 @@ router.post('/login', async (req, res) => {
         res.cookie('jwt', token, {expire: new Date() +1 })
         res.status(200).send({ token: token, message: "Success" })
     } else {
-        //res.cookie('token', JWT_SECRET, {expire: new Date() +1 })
         return res.status(400).json({ error: 'Invalid username or password' });
     }
 })

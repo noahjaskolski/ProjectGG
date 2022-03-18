@@ -24,8 +24,8 @@ app.use(cookieParser())
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'account.html'));
 });
-app.get('/level1', authenticate, (req, res) => {
-  res.sendFile(path.join(__dirname, 'level1.html'));
+app.get('/levels', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/level1.html'));
 });
 
 //Database connection
