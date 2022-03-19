@@ -18,7 +18,7 @@ router.post('/post', async (req, res) => {
     //If user exists, send message that user already exists
     const userExists = await Post.findOne( {email: req.body.email })
     if (userExists) {
-        return res.status(400).send(`User with this email already exists`);
+        return res.status(400).send({ error: "User with this email already exists"});
     }
     //create new post using schema from Models
     const post = new Post({
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
         console.log("Success")
         console.log(token)
         res.cookie('jwt', token, {expire: new Date() +1 })
-        res.status(200).send({ token: token, message: "Success" })
+        res.status(200).send({ token: token, message: "Login Successful" })
     } else {
         return res.status(400).json({ error: 'Invalid username or password' });
     }

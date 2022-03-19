@@ -18,9 +18,10 @@ async function login(event) {
     const body = await response.json();
     console.log(body)
     if (body.message) {
-        alert('successfull')
+        alert(body.message)
+        window.location.href = "/levels"
     } else {
         console.log("error")
-        alert("ERROR")
+        alert(body.error)
     }
 }
