@@ -19,20 +19,32 @@
     <link rel="stylesheet" href="../css/style.min.css">
     <link rel="stylesheet" href="../css/custom.css">
 
-   
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameGladiators</title>
+  <meta name="description" content="GameGladiators by gamegladiators.com">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-merged.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
 <body>
   <div class="mainheader">
-  <div class="probootstrap-search" id="probootstrap-search">
-    <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
-    <form action="#">
-      <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
-    </form>
-  </div>
-  
-  <div class="probootstrap-page-wrapper">
-    <!-- Fixed navbar -->
-    
+    <div class="probootstrap-search" id="probootstrap-search">
+      <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+      <form action="#">
+        <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+      </form>
+    </div>
+
+
+    <!-- <div class="probootstrap-page-wrapper">Fixed navbar -->
+
     <div class="probootstrap-header-top">
       <div class="container">
         <div class="row">
@@ -46,7 +58,8 @@
               <li><a href="#"><i class="icon-facebook2"></i></a></li>
               <li><a href="#"><i class="icon-instagram2"></i></a></li>
               <li><a href="#"><i class="icon-youtube"></i></a></li>
-              <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
+              <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -58,7 +71,8 @@
           <div class="btn-more js-btn-more visible-xs">
             <a href="#"><i class="icon-dots-three-vertical "></i></a>
           </div>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+            aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -73,7 +87,7 @@
             <li><a href="account.html">Create Account</a></li>
             <li><a href="welcome.html">Login</a></li>
             <li><a href="gladiators.html">Gladiators</a></li>
-            <li><a href="level1.html">Tutorial</a></li>
+            <li><a href="/levels">Levels</a></li>
             <li class="dropdown">
               <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
               <ul class="dropdown-menu">
@@ -81,7 +95,7 @@
                 <li><a href="news.html">News</a></li>
               </ul>
             </li>
-              </ul>
+          </ul>
         </div>
       </div>
     </nav>
@@ -90,52 +104,56 @@
         <div class="row">
           <div class="col-md-12 text-left section-heading probootstrap-animate">
             <h1>Welcome to Level 4</h1>
-            <p>Let's learn more about editors. There are a few that our commonly known such as vim, nano, or vi. Text editors enable you to write scripts which you will use in the next level. </p>
-          
-        </div>
+            <p>Let's learn more about editors. There are a few that our commonly known such as vim, nano, or vi. Text
+              editors enable you to write scripts which you will use in the next level. </p>
+
+          </div>
     </section>
     <div class="maincontent">
+      <div class="right">
+        <iframe width="100%" height="360" src="http://34.227.46.125:4200/" title="Terminal"></iframe>
+      </div>
       <div class="left">
-    
-    <p>To create files in vim, you will need to enter vim filename.extension so for example: vim myfile.txt. This would create a text file named myfile, but the extension can be used to create text files, bash scripts,   </p>
-    <p>
-      <h4>Practice Time:</h4>
-      <p>Go to terminal and view test.txt---cat test.txt<br> 
-        In terminal type <b>sudo vim test.txt</b> <br>
-        You are using vim to view test.txt. 
-        By using the <b>i</b> command, you move to insert mode. Do this now.<br>
-        Now go to the end of the file and type your name and favorite color. <br>
-        Press <b>esc</b> to exit insert mode<br>
-        Now type <b>:wq</b> to save and quit file<br>
-        Let's test your modifications. In terminal, type <b>cat test.txt.</b> <br> You should see your addition.<br>  
-      </p>
-      
+
+        <p>To create files in vim, you will need to enter vim filename.extension so for example: vim myfile.txt. This
+          would create a text file named myfile, but the extension can be used to create text files, bash scripts,
+        </p>
+        <p>
+        <h4>Practice Time:</h4>
+        <p>Go to terminal and view test.txt---cat test.txt<br>
+          In terminal type <b>sudo vim test.txt</b> <br>
+          You are using vim to view test.txt.
+          By using the <b>i</b> command, you move to insert mode. Do this now.<br>
+          Now go to the end of the file and type your name and favorite color. <br>
+          Press <b>esc</b> to exit insert mode<br>
+          Now type <b>:wq</b> to save and quit file<br>
+          Let's test your modifications. In terminal, type <b>cat test.txt.</b> <br> You should see your addition.<br>
+        </p>
+
+      </div>
+
     </div>
-    <div class="right">
-      <iframe width="640" height="360" src="http://34.227.46.125:4200/" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-</div>
-  </div>
-    
+
     <footer class="probootstrap-footer probootstrap-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="probootstrap-footer-widget">
-                <h3>About Our Programs</h3>
-                <p>Our mission is to design user interactive programs that make learning easy and fun through games. Each program has content geared to equip our users with the foundational knowledge to be successful in completing the course and gaining a deeper understanding.</p>
-                <h3>Social</h3>
-                <ul class="probootstrap-footer-social">
-                  <li><a href="#"><i class="icon-twitter"></i></a></li>
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-github"></i></a></li>
-                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
-                </ul>
-              </div>
-            </div>         
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>About Our Programs</h3>
+              <p>Our mission is to design user interactive programs that make learning easy and fun through games.
+                Each program has content geared to equip our users with the foundational knowledge to be successful in
+                completing the course and gaining a deeper understanding.</p>
+              <h3>Social</h3>
+              <ul class="probootstrap-footer-social">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-github"></i></a></li>
+                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                <li><a href="#"><i class="icon-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="probootstrap-copyright">
@@ -143,7 +161,7 @@
             <div class="row">
               <div class="col-md-8 text-left">
                 <p>&copy; 2022 Copyright Project GG All Rights Reserved
-                   Designed &amp; Developed with <i class="icon icon-heart"></i> by GameGladiators</p>
+                  Designed &amp; Developed with <i class="icon icon-heart"></i> by GameGladiators</p>
               </div>
               <div class="col-md-4 probootstrap-back-to-top">
                 <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
@@ -151,23 +169,22 @@
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
         <!-- END wrapper -->
         <script src="../js/scripts.min.js"></script>
         <script src="../js/main.min.js"></script>
         <script src="../js/custom.js"></script>
 
-    </body>
 </html>
