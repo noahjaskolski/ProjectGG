@@ -2,16 +2,6 @@ const mongoose = require('mongoose');
 
 //create schema
 const PostSchema = mongoose.Schema({
-    firstName: {
-        type: String,
-        //required: true
-    },
-
-    lastName: {
-        type: String,
-        //required: true
-    },
-
     email: {
         type: String,
         required: true,
@@ -21,7 +11,7 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    level: String
+    level: Number
 }, {collection: 'users_info'});
 
 module.exports = mongoose.model('Posts', PostSchema);
