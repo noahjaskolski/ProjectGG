@@ -13,6 +13,12 @@ const Post = require('../Models/Post');
 //on post request, create new entry, save entry to database, save entry in JSON formatting
 router.post('/post', async (req, res) => {
     //encrypt password
+    if (!req.body.email) {
+        return res.status(400).send({ error: "Please enter an email and password" });
+    };
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.body.email)) {
+        return res.status(400).send({ error: "Please enter a valid email address" })
+    };
     const encryptPass = await bcrypt.hash(req.body.password, 10);
 
     //If user exists, send message that user already exists
@@ -22,11 +28,9 @@ router.post('/post', async (req, res) => {
     }
     //create new post using schema from Models
     const post = new Post({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
         email: req.body.email,
         password: encryptPass,
-        level: req.body.level
+        level: 1
     });
     //save post to database
     const savedPost = await post.save();
@@ -47,10 +51,8 @@ router.post('/login', async (req, res) => {
             id: Post._id,
             email: Post.email
         }, JWT_SECRET)
-        console.log("Success")
-        console.log(token)
-        res.cookie('jwt', token, {expire: new Date() +1 })
-        res.status(200).send({ token: token, message: "Login Successful" })
+        return res.cookie('jwt', token, { maxAge: 10000 * 36 }) + res.status(200)
+         .send({ token: token, message: "Login Successful", level: user.level })
     } else {
         return res.status(400).json({ error: 'Invalid username or password' });
     }

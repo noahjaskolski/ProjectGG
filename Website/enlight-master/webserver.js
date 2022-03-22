@@ -24,8 +24,20 @@ app.use(cookieParser())
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.get('/levels', authenticate, (req, res) => {
+app.get('/levels/level1.html', authenticate, (req, res) => {
   res.sendFile(path.join(__dirname, 'levels/level1.html'));
+});
+app.get('/levels/level2.html', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/level2.html'));
+});
+app.get('/levels/level3.html', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/level3.html'));
+});
+app.get('/levels/level4.html', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/level4.html'));
+});
+app.get('/levels/level5.html', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/level5.html'));
 });
 
 //Database connection

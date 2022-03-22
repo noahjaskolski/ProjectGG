@@ -12,14 +12,15 @@ async function login(event) {
         },
         body: JSON.stringify({
             email,
-            password
+            password,
         })
     })
     const body = await response.json();
     console.log(body)
+    const level = body.level;
     if (body.message) {
         alert(body.message)
-        window.location.href = "/levels"
+        window.location.href = `/levels/level${level}.html`
     } else {
         console.log("error")
         alert(body.error)
