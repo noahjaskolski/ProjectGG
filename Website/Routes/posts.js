@@ -8,7 +8,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 //import schema
 const Post = require('../Models/Post');
-//const { findOne } = require('../Models/Post');
+const Answer = require('../Models/Answer')
+
 
 //on post request, create new entry, save entry to database, save entry in JSON formatting
 router.post('/post', async (req, res) => {
@@ -51,10 +52,24 @@ router.post('/login', async (req, res) => {
             id: Post._id,
             email: Post.email
         }, JWT_SECRET)
-        return res.cookie('jwt', token, { maxAge: 10000 * 36 }) + res.status(200)
+        return res.cookie('jwt', token, { maxAge: 10000 * 360 }) + res.status(200)
          .send({ token: token, message: "Login Successful", level: user.level })
     } else {
         return res.status(400).json({ error: 'Invalid username or password' });
+    }
+})
+
+router.post('/checkAnswer', async (req, res) => {
+
+    const answer = await Answer.findOne({ answer: req.body.answer }).lean()
+    
+    if (!req.body.answer) {
+        return res.json({ message: "Please enter an answer" })
+    }
+    if (answer == null) {
+        return res.status(400).json({ error: 'You\'re Wrong' })
+    } else {
+        return res.json({ message: "Correct" })
     }
 })
 
