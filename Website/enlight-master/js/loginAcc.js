@@ -16,7 +16,7 @@ async function login(event) {
         })
     })
     const body = await response.json();
-    console.log(body)
+    console.log(body.token)
     const level = body.level;
     if (body.message) {
         alert(body.message)
