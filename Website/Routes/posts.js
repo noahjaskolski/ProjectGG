@@ -49,8 +49,8 @@ router.post('/login', async (req, res) => {
 
     if (await bcrypt.compare( req.body.password, user.password )) {
         const token = jwt.sign({
-            id: Post._id,
-            email: Post.email
+            id: user._id,
+            email: user.email
         }, JWT_SECRET)
         return res.cookie('jwt', token, { maxAge: 10000 * 360 }) + res.status(200)
          .send({ token: token, message: "Login Successful", level: user.level })
@@ -71,6 +71,11 @@ router.post('/checkAnswer', async (req, res) => {
     } else {
         return res.json({ message: "Correct" })
     }
+})
+
+router.patch("/updateUser", async (req, res) => {
+    console.log(req.body.useremail)
+    const useremail = await Post.findOneAndUpdate({ email: req.body.useremail }, {$inc:{level:1}})
 })
 
 module.exports = router;
