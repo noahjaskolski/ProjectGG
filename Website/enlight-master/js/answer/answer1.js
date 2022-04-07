@@ -18,6 +18,18 @@ async function checkAnswer(event) {
     if (body.message) {
         alert(body.message)
         window.location.href = `/levels/level2.html`
+        let token = document.cookie;
+        let jsontoken = JSON.parse(atob(token.split('.')[1]));
+        let useremail = jsontoken.email
+        const result = await fetch("/api/updateUser", {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                useremail
+            })
+        })
     } else {
         console.log("error")
         alert(body.error)
