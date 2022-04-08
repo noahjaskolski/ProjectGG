@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 
 //create schema
 const AnswerSchema = mongoose.Schema({
+    level: {
+        type: Number
+    },
     answer: { 
         type: String,
         required: true

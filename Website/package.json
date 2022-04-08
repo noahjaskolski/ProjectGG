@@ -4,8 +4,7 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon enlight-master/webserver.js",
-    "dev": "nodemon src/main.js"
+    "start": "nodemon enlight-master/webserver.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
