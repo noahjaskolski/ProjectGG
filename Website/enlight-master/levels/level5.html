@@ -133,13 +133,13 @@
         This command executes the hello script.
       </p>
       <p> We are going to create a bash script to greet a user with the date and then add any two numbers. First, let's
-        create a file. In the terminal, enter sudo vim myProgram.sh (this allows you to open a text editor called vim and
+        create a file. In the terminal, enter<b>sudo vim myProgram.sh </b> (this allows you to open a text editor called vim and
         named myProgram.sh). Now you will see a blank editor, to edit the file, you will need to go into insert mode by
-        typing i."</p>
-        Type the shebang #!/bin/bash<br>
+        typing <b>i</b>.</p>
+        Type the shebang <b>#!/bin/bash</b><br>
         Then we need to add our commands to run in the bash script:<br>
         <br>
-        echo "Enter your name"<br>
+        <b>echo "Enter your name"<br>
         read name<br>
         echo "Welcome $name. Today," `date` "is a good day!"<br>
         echo "Enter your first number"<br>
@@ -147,7 +147,7 @@
         echo "Enter your second number"<br>
         read y <br>
         ((sum =x+y)) <br>
-        echo "Okay, your total is $sum" <br>
+        echo "Okay, your total is $sum"</b> <br>
         <br>
         You will need to save the file by exiting insert mode and typing :wq. This command tells the editor to save and
         quit the file. Now, in the terminal type <b>ls -l</b><br>
