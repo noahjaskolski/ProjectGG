@@ -39,6 +39,9 @@ app.get('/levels/level4.html', authenticate, (req, res) => {
 app.get('/levels/level5.html', authenticate, (req, res) => {
   res.sendFile(path.join(__dirname, 'levels/level5.html'));
 });
+app.get('/levels/cert.html', authenticate, (req, res) => {
+  res.sendFile(path.join(__dirname, 'levels/cert.html'));
+});
 
 //Database connection
 mongoose.connect(`${uri}`, () => {
