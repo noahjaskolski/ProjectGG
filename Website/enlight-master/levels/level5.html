@@ -140,29 +140,29 @@
         Type the shebang <b>#!/bin/bash</b><br>
         Then we need to add our commands to run in the bash script:<br>
         <br>
-        <b>echo "Enter your name"<br>
-        read name<br>
-        echo "Welcome $name. Today," `date` "is a good day!"<br>
-        echo "Enter your first number"<br>
-        read x <br>
-        echo "Enter your second number"<br>
-        read y <br>
-        ((sum =x+y)) <br>
-        echo "Okay, your total is $sum"</b> <br>
+        <b>echo "Enter your name"</b><br>
+        <b>read name</b><br>
+        <b>echo "Welcome $name. Today," `date` "is a good day!"</b><br>
+        <b>echo "Enter your first number"</b><br>
+        <b>read x</b><br>
+        <b>echo "Enter your second number"</b><br>
+        <b>read y </b><br>
+        <b>((sum =x+y))</b> <br>
+        <b>echo "Okay, your total is $sum"</b> <br>
         <br>
-        You will need to save the file by exiting insert mode and typing :wq. This command tells the editor to save and
+        You will need to save the file by exiting insert mode and typing <b>:wq</b>. This command tells the editor to save and
         quit the file. Now, in the terminal type <b>ls -l</b><br>
         You can see the root, group and user permissions. We need to change the permissions to be executable. Type <b>chmod +x myProgram.sh</b> <br>
         Now execute your program with <b>./myProgram.sh</b>
         <p>If you are unsure if your file is accurate, you can concatenate a file that we have already
         created
-        by typing cat testmyprogram.sh. **Note, here we are using the input variable name in the echo command with
+        by typing </b>cat testmyprogram.sh</b>. **Note, here we are using the input variable name in the echo command with
         $name.
         Also note that the `date` is telling the script to run the command with the symbol <b>`</b> for the command
         date.
         This can be used to execute any command that is natively known in the Linus OS.</p>
 
-      <p>Now that you have created your script myProgram.sh and you have executed it, go to testfiles directory and run the program there..no instructions provided for a reason!</p>
+      <p>Now that you have created your script myProgram.sh and you have executed it, <b><i>go to testfiles directory</i></b> and <b><<i>run the program there</i></b>there..no instructions provided for a reason!</p>
     </div>
     <form id="answer">
       <input name type=text id="la" placeholder="Your Answer" class="formstack"></input>
