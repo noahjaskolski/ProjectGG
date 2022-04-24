@@ -49,8 +49,9 @@ router.post('/login', async (req, res) => {
 
     if (await bcrypt.compare( req.body.password, user.password )) {
         const token = jwt.sign({
-            id: Post._id,
-            email: Post.email
+            id: user._id,
+            email: user.email,
+            level: user.level
         }, JWT_SECRET)
         return res.cookie('jwt', token, { maxAge: 10000 * 360 }) + res.status(200)
          .send({ token: token, message: "Login Successful", level: user.level })
@@ -61,15 +62,21 @@ router.post('/login', async (req, res) => {
 
 router.post('/checkAnswer', async (req, res) => {
 
-    const answer = await Answer.findOne({ answer: req.body.answer }).lean()
-    
+    const result = await Answer.findOne({ level: req.body.level }).lean()
     if (!req.body.answer) {
         return res.json({ message: "Please enter an answer" })
     }
-    if (answer == null) {
-        return res.status(400).json({ error: 'You\'re Wrong' })
+    if (result.answer == req.body.answer) {
+        return res.status(200).json({ message: 'You\'re Correct' })
     } else {
-        return res.json({ message: "Correct" })
+        return res.status(400).json({ error: "You\'re Wrong" })
+    }
+})
+
+router.patch("/updateUser", async (req, res) => {
+    console.log(req.body)
+    if(req.body.level == req.body.userlevel){
+        const useremail = await Post.findOneAndUpdate({ email: req.body.useremail }, {$inc:{level:1}})
     }
 })
 
