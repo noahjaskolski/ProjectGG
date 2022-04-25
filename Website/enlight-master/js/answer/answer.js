@@ -21,7 +21,8 @@ async function checkAnswer(event) {
         window.location.href = `/levels/level${level + 1}.html`
         let token = document.cookie;
         let jsontoken = JSON.parse(atob(token.split('.')[1]));
-        let { useremail, userlevel } = jsontoken
+        let useremail = jsontoken.email
+        let userlevel = jsontoken.level
         const result = await fetch("/api/updateUser", {
             method: 'PATCH',
             headers: {
